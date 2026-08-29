@@ -14,12 +14,12 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Payoo Web app</title>
 </head>
-<body class="bg-[#F4F5F7] h-screen">
+<body class="bg-[#F4F5F7] min-h-screen">
     <nav class="bg-white border-b  border-[rgba(8,8,8,0.5)] flex justify-between h-21  mx-auto max-w-lg p-6">
         <div class="flex items-center">
             <img src="assets/Group.png" alt="" class="h-12">
             <div>
-                <h1 class="font-bold">$45000</h1>
+                <h1 class="font-bold">$<span id="stored-money">45000</span></h1>
                 <p class="text-[rgba(8,8,8,0.5)]">Available Balance</p>
             </div>
         </div>
@@ -27,7 +27,7 @@
             <button class="btn text-[rgba(8,8,8,0.5)]"><i class="fa-solid fa-right-from-bracket text-[rgba(8,8,8,0.5)] rotate-180"></i>  log out</button>
         </div>
     </nav>
-    <main class="bg-white mx-auto max-w-lg p-6 space-y-5 rounded-b-2">
+    <main class="bg-white mx-auto max-w-lg p-6 space-y-5 rounded-b-2xl">
         <section class="space-y-4">
             <h1 class="text-3xl font-extrabold" >🔥 Welcome to Payooo!</h1>
             <p class="text-[rgba(8,8,8,0.5)]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
@@ -35,38 +35,76 @@
         <!-- Option section -->
         <section class="grid grid-cols-3 gap-4">
             <!-- Add money -->
-            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div id="img-add-money" class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500] hover:bg-gray-100 active:bg-gray-100">
                 <img src="assets/wallet1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Add money</p>
             </div>
-            <!-- Cashout -->
-            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <!-- Cash out -->
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
                 <img src="assets/send1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Cashout</p>
             </div>
             <!-- Transfer Money -->
-            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
                 <img src="assets/money1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Transfer Money</p>
             </div>
             <!-- Get Bonus -->
-            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
                 <img src="assets/bonus1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Get Bonus</p>
             </div>
             <!-- Pay Bill -->
-            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
                 <img src="assets/purse1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Pay Bill
                 </p>
             </div>
             <!-- Transactions -->
-            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
                 <img src="assets/transaction1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Transactions</p>
             </div>
         </section>
-
     </main>
+    <!-- Form section  -->
+     <!-- Add Money -->
+    <section id="form-add-money" class="mx-auto max-w-lg my-4 space-y-4 hidden">
+        <h1 class="font-bold ml-3">Add Money</h1>
+        <form action="" class="bg-white mx-auto max-w-lg p-6 space-y-5 ">
+            <!-- Select Bank -->
+            <div>
+                <select class="select rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full ">
+                    <option disabled selected>Pick a Bank</option>
+                    <option>Rupali Bank</option>
+                    <option>Dutch Bangla Bank</option>
+                    <option>Brac Bank</option>
+                  </select>
+            </div>
+            <!-- Bank Account Number -->
+            <div>
+                <label for="" class="font-medium"">Bank Account Number</label>
+                <br>
+                <input id="account-number" type="text" placeholder="Enter 11 Digit Account Number" class="rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full " >
+            </div>
+            <!-- Amount To Add  -->
+            <div>
+                <label for="" class="font-medium">Amount To Add</label>
+                <br>
+                <input id="add-money" type="text" placeholder="Add Amount To withdraw" class="rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full " >
+            </div>
+            <!-- Pin Number -->
+            <div>
+                <label for="" class="font-medium"">Pin Number</label>
+                <br>
+                <input id="pin-number" type="text" placeholder="Enter Your Pin" class="rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full " >
+            </div>
+            <!-- Button of Add money -->
+            <button id="btn-add-money" class="btn text-white w-full bg-[#0874F2] rounded-full text-center py-2 mt-4 font-medium">Add Money</button>
+        </form>
+    </section>
+    <script src="home.js">
+
+    </script>
 </body>
 </html>
