@@ -40,35 +40,35 @@
                 <p class="text-[rgba(8,8,8,0.5)]">Add money</p>
             </div>
             <!-- Cash out -->
-            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div id="img-cashout" class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500] hover:bg-gray-100 active:bg-gray-100 ">
                 <img src="assets/send1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Cashout</p>
             </div>
             <!-- Transfer Money -->
-            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500] hover:bg-gray-100 active:bg-gray-100">
                 <img src="assets/money1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Transfer Money</p>
             </div>
             <!-- Get Bonus -->
-            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500] hover:bg-gray-100 active:bg-gray-100">
                 <img src="assets/bonus1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Get Bonus</p>
             </div>
             <!-- Pay Bill -->
-            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500] hover:bg-gray-100 active:bg-gray-100">
                 <img src="assets/purse1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Pay Bill
                 </p>
             </div>
             <!-- Transactions -->
-            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+            <div class="border-1 border-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500] hover:bg-gray-100 active:bg-gray-100">
                 <img src="assets/transaction1.png" alt="">
                 <p class="text-[rgba(8,8,8,0.5)]">Transactions</p>
             </div>
         </section>
     </main>
     <!-- Form section  -->
-     <!-- Add Money -->
+     <!-- Add Money form-->
     <section id="form-add-money" class="mx-auto max-w-lg my-4 space-y-4 hidden">
         <h1 class="font-bold ml-3">Add Money</h1>
         <form action="" class="bg-white mx-auto max-w-lg p-6 space-y-5 ">
@@ -101,6 +101,32 @@
             </div>
             <!-- Button of Add money -->
             <button id="btn-add-money" class="btn text-white w-full bg-[#0874F2] rounded-full text-center py-2 mt-4 font-medium">Add Money</button>
+        </form>
+    </section>
+    <!-- Cash out form -->
+    <section id="form-cashout" class="mx-auto max-w-lg my-4 space-y-4 hidden">
+        <h1 class="font-bold ml-3">Add Money</h1>
+        <form action="" class="bg-white mx-auto max-w-lg p-6 space-y-5 ">
+            <!-- Agent Number -->
+            <div>
+                <label for="" class="font-medium"">Agent Number</label>
+                <br>
+                <input id="agent-number" type="text" placeholder="Enter 11 agent Number" class="rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full " >
+            </div>
+            <!-- Amount To Add  -->
+            <div>
+                <label for="" class="font-medium">Amount To Add</label>
+                <br>
+                <input id="withdraw-add-money" type="text" placeholder="Add Amount To withdraw" class="rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full " >
+            </div>
+            <!-- Pin Number -->
+            <div>
+                <label for="" class="font-medium"">Pin Number</label>
+                <br>
+                <input id="withdraw-pin-number" type="text" placeholder="Enter Your Pin" class="rounded-full bg-[#F4F5F7] px-5 py-2 mt-3 w-full " >
+            </div>
+            <!-- Button of Add money -->
+            <button id="btn-withdraw-money" class="btn text-white w-full bg-[#0874F2] rounded-full text-center py-2 mt-4 font-medium">withdraw Money</button>
         </form>
     </section>
     <script src="home.js">
