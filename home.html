@@ -8,18 +8,65 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- tailwind style -->
     <link rel="stylesheet" href="tailwind/tailwind.css">
+    <!-- fontawesome -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Payoo Web app</title>
 </head>
-<body>
-    <nav>
-        <div>
-            <img src="assets/Group.png" alt="">
+<body class="bg-[#F4F5F7] h-screen">
+    <nav class="bg-white border-b  border-[rgba(8,8,8,0.5)] flex justify-between h-21  mx-auto max-w-lg p-6">
+        <div class="flex items-center">
+            <img src="assets/Group.png" alt="" class="h-12">
             <div>
-                <h1>$45000</h1>
-
+                <h1 class="font-bold">$45000</h1>
+                <p class="text-[rgba(8,8,8,0.5)]">Available Balance</p>
             </div>
         </div>
-        <div></div>
+        <div>
+            <button class="btn text-[rgba(8,8,8,0.5)]"><i class="fa-solid fa-right-from-bracket text-[rgba(8,8,8,0.5)] rotate-180"></i>  log out</button>
+        </div>
     </nav>
+    <main class="bg-white mx-auto max-w-lg p-6 space-y-5 rounded-b-2">
+        <section class="space-y-4">
+            <h1 class="text-3xl font-extrabold" >🔥 Welcome to Payooo!</h1>
+            <p class="text-[rgba(8,8,8,0.5)]">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        </section>
+        <!-- Option section -->
+        <section class="grid grid-cols-3 gap-4">
+            <!-- Add money -->
+            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+                <img src="assets/wallet1.png" alt="">
+                <p class="text-[rgba(8,8,8,0.5)]">Add money</p>
+            </div>
+            <!-- Cashout -->
+            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+                <img src="assets/send1.png" alt="">
+                <p class="text-[rgba(8,8,8,0.5)]">Cashout</p>
+            </div>
+            <!-- Transfer Money -->
+            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+                <img src="assets/money1.png" alt="">
+                <p class="text-[rgba(8,8,8,0.5)]">Transfer Money</p>
+            </div>
+            <!-- Get Bonus -->
+            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+                <img src="assets/bonus1.png" alt="">
+                <p class="text-[rgba(8,8,8,0.5)]">Get Bonus</p>
+            </div>
+            <!-- Pay Bill -->
+            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+                <img src="assets/purse1.png" alt="">
+                <p class="text-[rgba(8,8,8,0.5)]">Pay Bill
+                </p>
+            </div>
+            <!-- Transactions -->
+            <div class="border-1 broder-[rgba(8,8,8,0.5)] rounded-lg text-center flex flex-col justify-center items-center py-5 px-3 font-[500]">
+                <img src="assets/transaction1.png" alt="">
+                <p class="text-[rgba(8,8,8,0.5)]">Transactions</p>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
